@@ -41,7 +41,7 @@ void modifyValue(int array[], int maxSize, int& oldValue, int& newValue) {
 		}
 		else throw out_of_range("Index is outside of bound of array\n");  //throws out of bound error
 	}
-	catch (out_of_range e ) { //catches error
+	catch (out_of_range e ) { //catches out of range error
 		cerr << e.what();
 	}
 };
@@ -63,7 +63,7 @@ void addValue(int array[], int& size, int maxSize) {
 			cout << input << " is added to end of list\n";
 		}
 	}
-	catch (out_of_range e) { //catches error
+	catch (out_of_range e) { //catches out of range error
 		cout << e.what();
 	}
 };
