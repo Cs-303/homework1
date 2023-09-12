@@ -24,7 +24,7 @@ void modifyValue(int array[], int maxSize, int& oldValue, int& newValue) {
 		cout << "Enter the index you want to modify: ";
 		cin >> index;
 
-		//if index is outside the boundary of array, throws runtime error for illegal index within array
+		//if index is outside the boundary of array, throws out of range error for illegal index within array
 		if (index >= 0 && index < maxSize) {
 			int input;
 
@@ -49,8 +49,8 @@ void modifyValue(int array[], int maxSize, int& oldValue, int& newValue) {
 
 void addValue(int array[], int& size, int maxSize) {
 	try {
-		//if current array size matches the maximum array size, throws out of range error as max size of array can't be increased
-		if (size == maxSize) throw out_of_range("Array size cannot get any higher\n\n");
+		//if current array size matches the maximum array size, throws out of range error as current size cannot get higher than array maximum size, else out of bound
+		if (size >= maxSize) throw out_of_range("Array size cannot get any higher\n\n");
 		else {
 
 			//input for the integer you want to add in end of list. size also increase
