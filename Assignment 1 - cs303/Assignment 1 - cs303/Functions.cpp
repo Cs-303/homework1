@@ -82,13 +82,13 @@ void replaceOrRemoveValue(int array[], int& size, bool& replace) {
 
 		if (replace) { //if replace option is true, it will replace the index array value with a 0
 			array[index] = 0;
-			cout << "index " << index << " is now replaced with 0\n";
+			cout << "value at index " << index << " is now replaced with 0\n";
 		}
 		else { // if replace option is false, it will remove the integer and index completely from the array.
 			for (int i = index; i < size - 1; i++) array[i] = array[i + 1]; //index is the starting point of forloop. from that point, it will keep grabbing the value of next index
 			size -= 1; //array size decrease
 
-			cout << "index " << index << " is now removed from the list\n";
+			cout << "value at index " << index << " is now removed from the list\n";
 		}
 	}
 	else cout << "Index is outside the bound of array";
